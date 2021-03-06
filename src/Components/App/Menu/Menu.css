@@ -1,0 +1,31 @@
+.menu {
+    margin-top: 1em;
+}
+
+.menu__button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.menu__button {
+    border: none;
+    background: none;
+    font-size: 0.7em;
+    font-weight: 700;
+    color: #CDCDCD;
+    outline: none;
+}
+
+.menu__button:hover {
+    cursor: pointer;
+}
+
+.menu__button--selected {
+    color: #4D4D4D;
+}
+
+@media only screen and (min-width: 1024px){
+    .menu__button {
+        font-size: 0.9em;
+    }
+}

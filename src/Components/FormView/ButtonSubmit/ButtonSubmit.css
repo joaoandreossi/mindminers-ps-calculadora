@@ -1,0 +1,26 @@
+.button-submit {
+    margin-top: 1em;
+    background: #4D4D4D;
+    color: white;
+    outline: none;
+    border: none;
+    width: fit-content;
+    align-self: flex-end;
+    padding: 1em;
+    font-weight: 700;
+}
+
+.button-submit:hover {
+    cursor: pointer;
+}
+
+.button-submit--disabled {
+    background: #CDCDCD;
+}
+
+@media only screen and (min-width: 1024px){
+    .button-submit {
+        font-size: 1em;
+        padding: 0.8em 1em;
+    }
+}

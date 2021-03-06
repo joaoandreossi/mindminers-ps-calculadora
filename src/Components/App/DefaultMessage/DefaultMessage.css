@@ -1,0 +1,12 @@
+.default-message {
+    margin-top: 2em;
+    font-size: 0.8em;
+    text-align: center;
+    color: #4D4D4D;
+}
+
+@media only screen and (min-width: 1024px){
+    .default-message {
+        font-size: 1em;
+    }
+}

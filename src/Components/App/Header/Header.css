@@ -1,0 +1,27 @@
+.header {
+    font-family: 'Roboto';
+    color: #4D4D4D;
+    font-size: 1rem;
+}
+
+.header__title {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.header__description {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.8em;
+}
+
+@media only screen and (min-width: 1024px){
+    .header__title {
+        font-size: 1.8em;
+    }
+
+    .header__description {
+        font-size: 1em;
+    }
+}

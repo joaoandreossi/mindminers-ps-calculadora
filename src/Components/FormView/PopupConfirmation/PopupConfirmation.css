@@ -1,0 +1,15 @@
+.popup-confirmation {
+    color: #4D4D4D;
+    padding: 0.2em 1em;
+    background: #b9fccb;
+    border: 1px solid #3b9653;
+    margin-top: 0.5em;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+@media only screen and (min-width: 1024px){
+    .popup-confirmation {
+        font-size: 1.1em;
+    }
+}

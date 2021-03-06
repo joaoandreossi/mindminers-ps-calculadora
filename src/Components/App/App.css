@@ -1,0 +1,39 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem; 
+}
+
+.app__component--hidden {
+    display: none;
+}
+
+@media only screen and (min-width: 600px) {
+    .app {
+        padding: 2rem 3rem;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .app {
+        padding: 2rem 5rem;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    .app {
+        padding: 2rem 7rem;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .app {
+        padding: 2rem 8rem;
+    }
+}
+
+@media only screen and (min-width: 1150px) {
+    .app {
+        padding: 2rem 15rem;
+    }
+}

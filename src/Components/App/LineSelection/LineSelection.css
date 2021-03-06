@@ -1,0 +1,32 @@
+.line {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 0.2em;
+}
+
+.line__selector {
+    position: absolute;
+    background: #4D4D4D;
+    height: 0.3em;
+    width: 33.33%;
+    animation: 1s; 
+}
+
+.line__selector--position-start {
+    left: 0;
+}
+
+.line__selector--position-mid {
+    left: 33.33%;
+}
+
+.line__selector--position-end {
+    left: 66.66%;
+}
+
+.line__thin {
+    background: #CDCDCD;
+    height: 0.15em;
+    width: 100%;
+}

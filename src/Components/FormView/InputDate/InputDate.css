@@ -1,0 +1,30 @@
+.input-date {
+    margin: 1em 0;
+}
+
+.input-date__input {
+    border: none;
+    background: inherit;
+    border-bottom: 0.2em solid #4D4D4D;
+    width: 100%;
+    outline: none;
+    font-weight: 700;
+    color: #4D4D4D;
+    padding-left: 1em;
+    box-sizing: border-box;
+}
+
+.input-date__input::placeholder {
+    font-weight: 700;
+    color: #A4A4A4;
+}
+
+@media only screen and (min-width: 1024px){
+    .input-date {
+        margin: 1.2em 0;
+    }
+
+    .input-date__input {
+        font-size: 0.95em;
+    }
+}

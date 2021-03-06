@@ -1,0 +1,92 @@
+#canvas {
+    min-height: 20em;
+}
+
+.chart {
+    max-height: 10em;
+}
+
+.chart__text-container {
+    display: flex;
+    justify-content: space-between;
+    color: #4D4D4D;
+    padding-left: 1em;
+    margin-bottom: 1em;
+}
+
+.chart__name {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.chart__menu-dropdown {
+    display: flex;
+    position: relative;
+}
+
+.chart__menu-dropdown:hover {
+    cursor: pointer;
+}
+
+.chart__menu-button-container {
+    display: flex;
+    align-self: flex-end;
+}
+
+.chart__menu-button-container:hover {
+    cursor: pointer;
+}
+
+.chart__menu-text {
+    color: #4D4D4D;
+    background: none;
+    outline: none;
+    border: none;
+    align-self: flex-end;
+    padding-bottom: 0.2em;
+}
+
+.chart__menu-text:hover {
+    cursor: pointer;
+}
+
+.chart__menu-icon {
+    align-self: flex-end;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.chart__menu-options-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+    color: white;
+    background: #4D4D4D;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+}
+
+.chart__menu-options {
+    padding: 0 0 0.3em 0.5em;
+}
+
+@media only screen and (min-width: 1024px){
+    .chart__name {
+        font-size: 3em;
+    }
+
+    .chart__menu-text {
+        font-size: 1.1em;
+    }
+
+    .chart__menu-icon {
+        align-self: flex-end;
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    .chart__menu-options-container {
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,39 @@
+.graph {
+    padding-top: 0.5em;
+}
+
+.graph__detailed-view-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.graph__button-back {
+    border: none;
+    color: white;
+    background: #4D4D4D;
+    align-self: flex-end;
+    margin-top: 0.5em;
+    outline: none;
+}
+
+.graph__button-back:hover {
+    cursor: pointer;
+}
+
+.graph__message {
+    color: #4D4D4D;
+    font-size: 0.7em;
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 1024px){
+    .graph__message {
+        font-size: 1em;
+    }
+
+    .graph__button-back {
+        font-size: 1.2em;
+        padding: 0.2em 1em;
+    }
+}

@@ -1,0 +1,38 @@
+.input-regular {
+    margin: 1em 0 1em 0;
+}
+
+.input-regular__input {
+    border: none;
+    background: inherit;
+    border-bottom: 0.2em solid #4D4D4D;
+    width: 100%;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #4D4D4D;
+    padding-left: 1em;
+    box-sizing: border-box;
+}
+
+.input-regular__input::placeholder {
+    font-weight: 700;
+    color: #A4A4A4;
+    text-transform: initial;
+}
+
+/*remove arrows from mobile*/
+input[type=number] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+@media only screen and (min-width: 1024px){
+    .input-regular {
+        margin: 1.2em 0;
+    }
+
+    .input-regular__input {
+        font-size: 0.95em;
+    }
+}
