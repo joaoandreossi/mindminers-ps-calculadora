@@ -87,8 +87,7 @@ function App() {
 						</History> : <DefaultMessage></DefaultMessage>
 					}				
 				</div>
-						
-					</div>
+			</div>
 		</div>
 		
 	)

@@ -2,12 +2,8 @@ import './EntriesGroup.css'
 
 function EntriesGroup(props){
 
-    const handleClick = () => {
-        
-    }
-
     return(
-        <div onClick={handleClick}>
+        <div>
             <div className='entries-group'>
                 <div className='entries-group__name'>{props.name}</div>
                 <div className='entries-group__operation-container'>

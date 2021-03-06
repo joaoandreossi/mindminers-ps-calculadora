@@ -20,20 +20,23 @@ EntriesAPI.prototype.removeOperation = function(name, id){
         return false
 
     } else {
-
         let years = Object.keys(this.db[name].year)
+
         years.forEach(year => {
             this.db[name].year[year] = this.db[name].year[year].filter(op => op.id !== id)
-
             if(Object.keys(this.db[name].year[year]).length === 0){
                 delete this.db[name].year[year]
             }
         })
-        
+
         if(Object.keys(this.db[name].year).length === 0){
+
             delete this.db[name]
+
         } else {
+
             recalculateValuesRetroactively(this.db, name)
+
         }
     }
 }
@@ -43,20 +46,16 @@ EntriesAPI.prototype.print = function(){
 }
 
 EntriesAPI.prototype.getOperationById = function(name, id){
-    console.log('getbyid')
     if(!this.db.hasOwnProperty(name)){
 
         throw new Error('Não existe nenhuma ação com esse código.')
 
     } else {
-
         let years = Object.keys(this.db[name].year)
         let targetOp
 
         years.forEach(year => {
-
             targetOp = this.db[name].year[year].filter(op => op.id === id)
-
         })
 
         return targetOp[0]
@@ -65,7 +64,9 @@ EntriesAPI.prototype.getOperationById = function(name, id){
 
 EntriesAPI.prototype.getStockNumberOfEntries = function(name){
     if(Object.keys(this.db).length === 0){
+
         return 0
+
     } else {
         let years = Object.keys(this.db[name].year)
         let entriesNum = 0
@@ -80,7 +81,9 @@ EntriesAPI.prototype.getStockNumberOfEntries = function(name){
 
 EntriesAPI.prototype.getAllEntries = function(){
     if(Object.keys(this.db).length === 0){
+
         return {}
+
     } else {
         let stocks = Object.keys(this.db)
         let entries = {}
@@ -88,12 +91,14 @@ EntriesAPI.prototype.getAllEntries = function(){
         stocks.forEach(stock => {
             let years = Object.keys(this.db[stock].year)
             entries[stock] = []
+
             years.forEach(year => 
                 this.db[stock].year[year].forEach(op =>
                     entries[stock].push(op)
                 )
             )
         })
+
         return entries
     }
 }
@@ -226,28 +231,40 @@ const updateValuesFromSellOperation = (obj, operation) => {
     obj[operation.code].qm = calculateSellQM(obj[operation.code].qm, operation.quantity) 
 
     if(obj[operation.code].ra < 0) {
+
         obj[operation.code].pa = calculateNegativePA(obj[operation.code].pa, obj[operation.code].ra)
+
     } else {
+
         operation.salesTax = calculateTax(obj[operation.code].ra, obj[operation.code].pa)
         obj[operation.code].pa = calculatePositivePA(obj[operation.code].pa, obj[operation.code].ra)
+
     }
 }
 
 const recalculateValuesRetroactively = (obj, name) => {
-    console.log(obj)
-    console.log(name)
     if(!obj.hasOwnProperty(name)){
+
         throw new Error('Não existe nenhuma ação com esse código.')
+
     } else {
+
         const years = Object.getOwnPropertyNames(obj[name].year)
         resetValues(obj, name)
+
         years.forEach(year => {
+
             let sortedOperations = obj[name].year[year].sort((a,b) => a.date - b.date)
+
             sortedOperations.forEach(op => {
                 if(op.type === 'Compra'){
+
                     updateValuesFromBuyOperation(obj, op)
+
                 } else {
+
                     updateValuesFromSellOperation(obj, op)
+
                 }
             })
         })
@@ -256,8 +273,11 @@ const recalculateValuesRetroactively = (obj, name) => {
 
 const resetValues = (obj, name) => {
     if(!obj.hasOwnProperty(name)){
+
         throw new Error('Não existe nenhuma ação com esse código.')
+
     } else {
+
         obj[name].pm = 0
         obj[name].qm = 0
         obj[name].ra = 0
@@ -265,6 +285,7 @@ const resetValues = (obj, name) => {
     }
 }
 
+//Helper functions
 const calculatePM = (pm, qm, pc, qc, tc) => {
     return (pm * qm + pc * qc + tc) / (qm + qc)
 }
