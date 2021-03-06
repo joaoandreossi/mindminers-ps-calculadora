@@ -293,4 +293,4 @@ const calculateTax = (ra, pa) => {
     return (ra - Math.abs(Math.min(ra, pa))) * 0.15
 }
 
-module.exports = EntriesAPI
+export default EntriesAPI
