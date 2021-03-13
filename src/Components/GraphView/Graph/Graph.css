@@ -17,6 +17,10 @@
 }
 
 .graph__button-back:hover {
+    background: #999999;
+}
+
+.graph__button-back:hover {
     cursor: pointer;
 }
 

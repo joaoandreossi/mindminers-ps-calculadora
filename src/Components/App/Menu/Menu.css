@@ -18,6 +18,7 @@
 
 .menu__button:hover {
     cursor: pointer;
+    color: #8F8F8F;
 }
 
 .menu__button--selected {
