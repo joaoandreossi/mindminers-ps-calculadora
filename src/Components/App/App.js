@@ -8,7 +8,6 @@ import PopupError from '../FormView/PopupError/PopupError'
 import Form from '../FormView/Form/Form'
 import Graph from '../GraphView/Graph/Graph'
 import History from '../HistoryView/History/History'
-
 import './App.css'
 
 function App() {
@@ -23,14 +22,13 @@ function App() {
 	const [entries, setEntries] = useState(entriesAPI.current.getAllEntries())
 	
 
+
 	const getTabSelectionFromChild = (dataFromTabChild) => {
 		setActiveTab(dataFromTabChild)		
 	}
 
 	const getNewOperationFromChild = (dataFromStockFormChild) => {
-
 		setId(id + 1)
-
 		try{
 			entriesAPI.current.addNewOperation(dataFromStockFormChild)
 			setEntries(entriesAPI.current.getAllEntries())
@@ -42,7 +40,6 @@ function App() {
 			setToggleErrorPopup(true)
 			setTimeout(() => {setToggleErrorPopup(false)}, 5000)
 		}
-		
 	}
 
 	const removeOperation = (name, id) => {
@@ -56,12 +53,13 @@ function App() {
 		return entriesAPI.current.getStockNumberOfEntries(name)
 	}
 
+
+
 	return (
 		<div>
 			<div className='app'>
 				<Header></Header>
 				<Menu getTabSelectionFromChild={getTabSelectionFromChild}></Menu>
-				
 				<div className={activeTab === 0 ? '' : 'app__component--hidden'}>
 					<div className={toggleConfirmationPopup ? '' : 'app__component--hidden'}>
 						<PopupConfirmation></PopupConfirmation>
@@ -89,7 +87,6 @@ function App() {
 				</div>
 			</div>
 		</div>
-		
 	)
 }
 

@@ -7,6 +7,8 @@ function History(props){
     const [currentList, setCurrentList] = useState('')
     const [listSize, setListSize] = useState(0)
 
+
+
     const handleRender = () => {
         let keys = Object.keys(props.entries)
         let render = []
@@ -20,7 +22,6 @@ function History(props){
                         }}>
                         <EntriesGroup key={key} name={key} operationNumber={props.numberEntries(key)}></EntriesGroup>
                     </div>
-                    
                 )
             })
             return render
@@ -57,6 +58,8 @@ function History(props){
         setListSize(listSize - 1)
     }
 
+
+    
     return(
         <div className='history'>
             {handleRender()}
