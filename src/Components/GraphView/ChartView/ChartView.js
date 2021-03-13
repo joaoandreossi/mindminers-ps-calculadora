@@ -1,10 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
-
 import Chart from 'chart.js'
-
 import ArrowDown from '../../FormView/InputDropdown/Icons/expand.svg'
 import ArrowUp from '../../FormView/InputDropdown/Icons/collapse.svg'
-
 import './ChartView.css'
 
 function ChartView(props){   
@@ -13,17 +10,16 @@ function ChartView(props){
         let sortedYears = Object.keys(props.values).sort((a,b) => b-a)
         return sortedYears[0]
     })
-    const [chartRatio, setChartRatio] = useState(2)
     const [chart, setChart] = useState(undefined)
     const canvas = useRef(null)
 
 
+
     const init = () => {
         setChart(initChart())
-        
     }
 
-    const test = () => {
+    const getAspectRatioFromScreenSize = () => {
         if(window.innerWidth > window.innerHeight) {
             if(window.innerWidth > 1800){
                 return 2.8
@@ -32,14 +28,12 @@ function ChartView(props){
             } else {
                 return 2
             }
-            
         } else {
             if(window.innerWidth > 475){
                 return 1.2
             } else {
                 return 0.9
             }
-            
         }
     }
 
@@ -69,7 +63,7 @@ function ChartView(props){
             options: {
                 responsive: true,
                 maintainAspectRatio: true,
-                aspectRatio: test(),
+                aspectRatio: getAspectRatioFromScreenSize(),
                 legend: {
                     display: false
                 },
@@ -105,11 +99,8 @@ function ChartView(props){
         }
     }
 
-    
-
     const updateChart = () => {
         chart.data.datasets[0].data = props.values[currentYear]
-        chart.options.aspectRatio = chartRatio
         chart.update()
     }
 
@@ -124,6 +115,7 @@ function ChartView(props){
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentYear])
+
 
 
     return(
@@ -141,9 +133,7 @@ function ChartView(props){
                         </div>
                     }
                 </div>
-                
             </div>
-            
             <canvas id='canvas' ref={canvas}></canvas>
         </div>
     )
