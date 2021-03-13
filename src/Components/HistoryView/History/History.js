@@ -35,7 +35,7 @@ function History(props){
                             <EntriesCard
                                 id={op.id}
                                 title={op.code}
-                                date={`${op.date.getDay()}/${op.date.getMonth() + 1}/${op.date.getFullYear()}`}
+                                date={`${op.date.getDate()}/${op.date.getMonth() + 1}/${op.date.getFullYear()}`}
                                 type={op.type}
                                 quantity={op.quantity}
                                 price={op.price}
