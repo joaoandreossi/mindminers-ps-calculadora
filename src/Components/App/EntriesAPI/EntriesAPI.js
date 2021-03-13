@@ -1,3 +1,5 @@
+import Helper from './Helper'
+
 const EntriesAPI = function(){
     this.db = {}
 }
@@ -222,22 +224,22 @@ const addNewSellOperation = (obj, operation) => {
 }
 
 const updateValuesFromBuyOperation = (obj, operation) => {
-    obj[operation.code].pm = calculatePM(obj[operation.code].pm, obj[operation.code].qm, operation.price, operation.quantity, operation.tax)
-    obj[operation.code].qm = calculateBuyQM(obj[operation.code].qm, operation.quantity)
+    obj[operation.code].pm = Helper.calculatePM(obj[operation.code].pm, obj[operation.code].qm, operation.price, operation.quantity, operation.tax)
+    obj[operation.code].qm = Helper.calculateBuyQM(obj[operation.code].qm, operation.quantity)
 }
 
 const updateValuesFromSellOperation = (obj, operation) => {
-    obj[operation.code].ra = calculateRA(obj[operation.code].pm, operation.price, operation.quantity, operation.tax)
-    obj[operation.code].qm = calculateSellQM(obj[operation.code].qm, operation.quantity) 
+    obj[operation.code].ra = Helper.calculateRA(obj[operation.code].pm, operation.price, operation.quantity, operation.tax)
+    obj[operation.code].qm = Helper.calculateSellQM(obj[operation.code].qm, operation.quantity) 
 
     if(obj[operation.code].ra < 0) {
 
-        obj[operation.code].pa = calculateNegativePA(obj[operation.code].pa, obj[operation.code].ra)
+        obj[operation.code].pa = Helper.calculateNegativePA(obj[operation.code].pa, obj[operation.code].ra)
 
     } else {
 
-        operation.salesTax = calculateTax(obj[operation.code].ra, obj[operation.code].pa)
-        obj[operation.code].pa = calculatePositivePA(obj[operation.code].pa, obj[operation.code].ra)
+        operation.salesTax = Helper.calculateTax(obj[operation.code].ra, obj[operation.code].pa)
+        obj[operation.code].pa = Helper.calculatePositivePA(obj[operation.code].pa, obj[operation.code].ra)
 
     }
 }
@@ -283,35 +285,6 @@ const resetValues = (obj, name) => {
         obj[name].ra = 0
         obj[name].pa = 0
     }
-}
-
-//Helper functions
-const calculatePM = (pm, qm, pc, qc, tc) => {
-    return (pm * qm + pc * qc + tc) / (qm + qc)
-}
-
-const calculateBuyQM = (qm, qv) => {
-    return qm + qv
-}
-
-const calculateSellQM = (qm, qv) => {
-    return qm - qv
-}
-
-const calculateRA = (pm, pv, qv, tv) => {
-    return (pv - pm) * qv - tv
-}
-
-const calculateNegativePA = (pa, ra) => {
-    return pa + ra
-}
-
-const calculatePositivePA = (pa, ra) => {
-    return pa - Math.min(ra, pa)
-}
-
-const calculateTax = (ra, pa) => {
-    return (ra - Math.abs(Math.min(ra, pa))) * 0.15
 }
 
 export default EntriesAPI
