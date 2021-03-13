@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/mindminers-ps-calculadora/static/css/main.64e99f34.chunk.css",
-    "main.js": "/mindminers-ps-calculadora/static/js/main.6a54e53a.chunk.js",
-    "main.js.map": "/mindminers-ps-calculadora/static/js/main.6a54e53a.chunk.js.map",
-    "runtime-main.js": "/mindminers-ps-calculadora/static/js/runtime-main.9a7eb8ee.js",
-    "runtime-main.js.map": "/mindminers-ps-calculadora/static/js/runtime-main.9a7eb8ee.js.map",
-    "static/js/2.906ece37.chunk.js": "/mindminers-ps-calculadora/static/js/2.906ece37.chunk.js",
-    "static/js/2.906ece37.chunk.js.map": "/mindminers-ps-calculadora/static/js/2.906ece37.chunk.js.map",
-    "static/js/3.761681e2.chunk.js": "/mindminers-ps-calculadora/static/js/3.761681e2.chunk.js",
-    "static/js/3.761681e2.chunk.js.map": "/mindminers-ps-calculadora/static/js/3.761681e2.chunk.js.map",
+    "main.css": "/mindminers-ps-calculadora/static/css/main.771e03c6.chunk.css",
+    "main.js": "/mindminers-ps-calculadora/static/js/main.ded9cc7b.chunk.js",
+    "main.js.map": "/mindminers-ps-calculadora/static/js/main.ded9cc7b.chunk.js.map",
+    "runtime-main.js": "/mindminers-ps-calculadora/static/js/runtime-main.d752e3d9.js",
+    "runtime-main.js.map": "/mindminers-ps-calculadora/static/js/runtime-main.d752e3d9.js.map",
+    "static/js/2.8bcbf120.chunk.js": "/mindminers-ps-calculadora/static/js/2.8bcbf120.chunk.js",
+    "static/js/2.8bcbf120.chunk.js.map": "/mindminers-ps-calculadora/static/js/2.8bcbf120.chunk.js.map",
+    "static/js/3.6b563aaf.chunk.js": "/mindminers-ps-calculadora/static/js/3.6b563aaf.chunk.js",
+    "static/js/3.6b563aaf.chunk.js.map": "/mindminers-ps-calculadora/static/js/3.6b563aaf.chunk.js.map",
     "index.html": "/mindminers-ps-calculadora/index.html",
-    "static/css/main.64e99f34.chunk.css.map": "/mindminers-ps-calculadora/static/css/main.64e99f34.chunk.css.map",
-    "static/js/2.906ece37.chunk.js.LICENSE.txt": "/mindminers-ps-calculadora/static/js/2.906ece37.chunk.js.LICENSE.txt",
-    "static/media/collapse.29b48edf.svg": "/mindminers-ps-calculadora/static/media/collapse.29b48edf.svg",
-    "static/media/expand.2b95325f.svg": "/mindminers-ps-calculadora/static/media/expand.2b95325f.svg",
-    "static/media/icon-trash.d6b8d28f.svg": "/mindminers-ps-calculadora/static/media/icon-trash.d6b8d28f.svg"
+    "static/css/main.771e03c6.chunk.css.map": "/mindminers-ps-calculadora/static/css/main.771e03c6.chunk.css.map",
+    "static/js/2.8bcbf120.chunk.js.LICENSE.txt": "/mindminers-ps-calculadora/static/js/2.8bcbf120.chunk.js.LICENSE.txt",
+    "static/media/collapse.ca91d58c.svg": "/mindminers-ps-calculadora/static/media/collapse.ca91d58c.svg",
+    "static/media/expand.921379ab.svg": "/mindminers-ps-calculadora/static/media/expand.921379ab.svg",
+    "static/media/icon-trash.43ee3fb5.svg": "/mindminers-ps-calculadora/static/media/icon-trash.43ee3fb5.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9a7eb8ee.js",
-    "static/js/2.906ece37.chunk.js",
-    "static/css/main.64e99f34.chunk.css",
-    "static/js/main.6a54e53a.chunk.js"
+    "static/js/runtime-main.d752e3d9.js",
+    "static/js/2.8bcbf120.chunk.js",
+    "static/css/main.771e03c6.chunk.css",
+    "static/js/main.ded9cc7b.chunk.js"
   ]
 }
